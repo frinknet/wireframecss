@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
+		
+:root {
+  --bg-light: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAALElEQVQIW2NkwALevXv3nxFdHCQoJCTEiCIBEwQphksgC8Il0AXBEtgEQRIA6zMX0LikUbQAAAAASUVORK5CYII=);
+  --bg-dark: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAJ0lEQVQIW2NkwA7+M2IR/w8UY0SXAAuCFCNLwAWRJVAEYRIYgiAJALsgBgYbCawOAAAAAElFTkSuQmCC);
+  --font-sketch: "Cabin Sketch",cursive;
+}
+	
+body {
+  filter: grayscale(70%);
+}
+	
+*:not(.icon):not(.fontawesome) {
+	font-family: var(--font-sketch) !important;
+}
+
+.btn,
+.card,
+.alert,
+.module,
+.modal-dialog > *,
+.card-footer,
+.dropdown-menu,
+.dropdown-item:hover,
+.list-group-item,
+.nav-tabs .nav-link:not(.active):not(.disabled):hover,
+.navbar-light,
+.page-item > *,
+.popover-header,
+.popover-body,
+th,
+td,
+button,
+.bg-light {
+  background-image: var(--bg-light) !important;
+}
+		
+.btn:not(:disabled):not(.disabled).active, .btn:not(:disabled):not(.disabled):active,
+.carousel-item,
+.card-header,
+.custom-file-label:after,
+.input-group-text,
+.jumbotron,
+.list-group-item.active,
+.nav-pills .active,
+.navbar-dark,
+.progress-bar,
+.modal,
+.bg-dark {
+  background-image: var(--bg-dark) !important;
+}
+	
+.progress,	
+.breadcrumb,
+pre {
+  background: var(--bg-light) !important;
+}
+
+.global-nav {
+	-webkit-mask-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.9)), var(--bg-dark);
+	mask-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.9)), var(--bg-dark);
+}
+
+.ProfileCard-bg,
+.DashboardProfileCard-bg,
+.background,
+iframe,
+video,
+object,
+embed,
+canvas,
+img {
+	-webkit-mask-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.9)), var(--bg-dark);
+	mask-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.9)), var(--bg-dark);
+	filter: contrast(500%) grayscale(50%) brightness(60%) opacity(80%);
+}
+	
+.background::after,
+.navbar::after,
+nav::after {
+	content: "";
+	-webkit-mask-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.9)), var(--bg-dark);
+	mask-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.9)), var(--bg-dark);
+	background-color: #999;
+	opacity: 1;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;   
+}
